@@ -10,7 +10,6 @@ export default function SearchBar({cityHandler}) {
         <GooglePlacesAutocomplete 
             query={{key: "AIzaSyBvQSSq_LVkhiWmkHXbRCyOZTNE8yzgfBI"}}
             onPress={(data, details = null)=>{
-                console.log(data.description)
                 const city = data.description.split(',')[0]
                 cityHandler(city);
             }}
